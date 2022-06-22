@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios"
 import { PhonesCard } from "../../components/phonesCard/phonesCard";
-
+import "./style.modules.css"
 export function Home() {
     const [phones, setPhones] = useState([])
     useEffect(() =>{
@@ -16,7 +16,9 @@ export function Home() {
         getPhones()
     }, [])
     console.log(phones)
-    return ( <>
+    return ( 
+    <section className="AllPhones">
         <PhonesCard phones = {phones} />
-    </> );
+    </section> 
+    );
 }

@@ -1,10 +1,11 @@
 import {Navbar, Container} from "react-bootstrap"
+import { Link } from "react-router-dom";
 import Logo from "../../img/logo.png"
 export function NavBar() {
     return ( 
         <Navbar bg="light" variant="light">
             <Container>
-            <Navbar.Brand href="#home">
+            <Link to="/" style={{textDecoration: "none", color: "black", fontWeight: "700"}}>
                 <img
                 alt="logo"
                 src={Logo}
@@ -13,7 +14,7 @@ export function NavBar() {
                 className="d-inline-block align-top"
                 />{' '}
             The Phone Cave
-            </Navbar.Brand>
+            </Link>
             </Container>
         </Navbar>
      );
